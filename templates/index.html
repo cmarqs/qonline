@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quadra Online - Quadras de tênis em 5 minutos!</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../static/css/grid.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" href="../static/css/rd-mailform.css">
+	<link rel="stylesheet" href="../static/css/jquery.timepicker.css">
+	
+
+	<script  src="//code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+	<!-- <script src="//use.fontawesome.com/8ee7b11f51.js"></script> -->
+	<script  src="//code.jquery.com/jquery-migrate-3.0.0.min.js"  integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="  crossorigin="anonymous"></script>
+
+	<!--[if lt IE 9]>
+	<html class="lt-ie9">
+	<div style=' clear: both; text-align:center; position: relative;'>
+		<a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+			<img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+					 alt="Visualize melhor atualizando grátis seu navegador."/>
+		</a>
+	</div>
+	<script src="../static/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<script src='../static/js/device.min.js'></script>
+    <script type="text/javascript">
+
+        function stopRKey(evt) {
+          var evt = (evt) ? evt : ((event) ? event : null);
+          var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+          if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+        }
+
+        document.onkeypress = stopRKey;
+    </script>
+	
+
+</head>
+
+<body>
+<div class="page">
+	<!--==============================HEADER==============================-->
+	<header>
+		<section class="parallax parallax01">
+			<div class="top-panel">
+				<div class="container">
+					<div class="brand">
+						<h1 class="brand_name"><a href="./">quadra</a></h1>
+						<p class="brand_slogan">On line</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<h2>Encontre e reserve quadras de t&ecirc;nis</h2>
+				<p><em>Jogue no dia, hora e perto de voc&ecirc;!</em></p>
+				<div class="row">
+					<div class="preffix_4 grid_4">
+						<!-- RD Mailform -->
+						<form class='rd-mailform' method="post" onkeypress="return event.keyCode != 13;">
+							<!-- RD Mailform Type -->
+							<input type="hidden" name="form-type" value="contact"/>
+							<!-- END RD Mailform Type -->
+							<fieldset>
+								<h4>Quando e onde quer jogar?</h4>
+								<label data-add-placeholder data-add-icon>
+									<input type="date"
+										   name="date"
+										   placeholder="Melhor dia"
+										   data-constraints="@Date"
+											/>
+								</label>
+								
+								<label data-add-placeholder data-add-icon>
+									<input type="text"
+										   name="time"
+										   id="time"
+										   placeholder="Hora de início"
+										   data-constraints="@Time @NotEmpty"
+											/>
+								</label>
+								
+								<label data-add-placeholder data-add-icon>
+									<input 
+											type="text" 
+											name="autocomplete" 
+											id="autocomplete" 
+											onFocus="geolocate()" 
+											data-constraints="@NotEmpty"/>
+								</label>
+								
+								
+								<h4>Como podemos te avisar?</h4>
+								<label data-add-placeholder data-add-icon>
+									<input type="text"
+										   name="name"
+										   placeholder="Seu nome"
+										   data-constraints="@NotEmpty @LettersOnly"/>
+								</label>
+
+								<label data-add-placeholder data-add-icon>
+									<input type="text"
+										   name="email"
+										   placeholder="E-mail"
+										   data-constraints="@NotEmpty @Email"/>
+								</label>
+
+								<label data-add-placeholder data-add-icon>
+									<input type="text"
+										   name="phone"
+										   placeholder="Nº celular"
+										   data-constraints="@NotEmpty @Phone"/>
+								</label>
+
+								<div class="mfControls btn-group">
+									<button class="btn" type="submit">Ver Quadras</button>
+								</div>
+								<div class="mfInfo"></div>
+							</fieldset>
+							<p class="text-center"><small>Entraremos em contato em até 5 minutos para lhe oferecer as melhores quadras! </small></p>
+						</form>
+						<!-- END RD Mailform -->
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+<script src="../static/js/script.js"></script>
+<script src="../static/js/geolocate.js"></script>
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDGNiEgY1OMgZRcLJFelMz66dv0xcPQ_W4&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="../static/js/jquery.timepicker.js"></script>
+	<script type="text/javascript">
+		$('#time').timepicker({
+		'minTime': '8:00',
+		'maxTime': '23:00',
+		'showDuration': false,
+		'timeFormat': 'H:i'
+		});
+	</script>
+<!-- coded by nyan -->
+</body>
+</html>
