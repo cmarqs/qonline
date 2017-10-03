@@ -5,13 +5,14 @@ import urllib
 import requests
 #import chatbrain as cb
 
-TOKEN = "COLOQUE AQUI A HASH DO TELEGRAM"
-URL = "https://api.telegram.org/bot{478992428:AAFYGgJcWT7MOTgMPaI41NWzsG5bStk88mk}/".format(TOKEN)
+TOKEN = "478992428:AAFYGgJcWT7MOTgMPaI41NWzsG5bStk88mk"
+URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 
 def get_url(url):
     response = requests.get(url)
     content = response.content.decode("utf8")
+    print(url)
     return content
 
 
