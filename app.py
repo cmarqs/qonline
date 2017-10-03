@@ -33,9 +33,7 @@ def main():
 
         # Envia Pedido para o telegram
         msg = "data: {} \n hora: {} \n local: {} \n nome: {} \n email: {} \n telefone: {} \n canal: {} \n id: {}".format(date, time, location, name, email, phone, canal, contato_id)
-        pet.send_message(msg, 171978688) #Mauricio
-        time.sleep(2)
-        pet.send_message(msg, 392174485) #Graziano
+        pet.send_message(msg, 478992428) #Deuce
 
 
         return redirect(url_for('success', contato_id=contato_id))

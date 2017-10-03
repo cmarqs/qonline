@@ -6,7 +6,7 @@ import requests
 #import chatbrain as cb
 
 TOKEN = "COLOQUE AQUI A HASH DO TELEGRAM"
-URL = "https://api.telegram.org/bot{}/".format(TOKEN)
+URL = "https://api.telegram.org/bot{478992428:AAFYGgJcWT7MOTgMPaI41NWzsG5bStk88mk}/".format(TOKEN)
 
 
 def get_url(url):
@@ -59,7 +59,7 @@ def echo_all(updates):
         #text = js['result']['fulfillment']['messages'][0]['speech']
         # Integra com a inteligencia propria
         #text = cb.get_resposta(text, chat)
-        text = "Oi! a unica coisa que eu sei fazer é enviar os contatos do site Chaveiro Seguro."
+        text = "Oi! a unica coisa que eu sei fazer é enviar os contatos do site Quadra Online."
         send_message(text, chat)
 
 def main():
